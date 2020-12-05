@@ -1,4 +1,5 @@
 import 'package:diceeapp/FirstPage.dart';
+import 'package:diceeapp/TwoLevel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'dart:async';
@@ -27,7 +28,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 5), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp())));
+    Timer(Duration(seconds: 5), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => MyLevel())));
 
   }
 
