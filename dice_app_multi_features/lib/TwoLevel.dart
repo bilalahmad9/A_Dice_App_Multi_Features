@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 60),
+                padding: const EdgeInsets.only(top: 10),
                 child: RaisedButton(onPressed: changeLevel2,
                   child: Text('Hard Level'),
                 ),

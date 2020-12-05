@@ -62,7 +62,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: RaisedButton(onPressed: changeImage,
                   child: Text('Roll Dice'),
                 ),
-              )
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: RaisedButton(onPressed: MainMenu,
+                  child: Text('Exit Game'),
+                ),
+              ),
             ],
           ),
         )
@@ -73,6 +79,12 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       randomIntForDiceOne = Random().nextInt(6);
       randomIntForDiceTwo = Random().nextInt(6);
+    });
+  }
+
+  void MainMenu() {
+    setState(() {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => MyLevel()));
     });
   }
 }
