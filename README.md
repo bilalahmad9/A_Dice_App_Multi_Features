@@ -32,3 +32,7 @@
 # Guess Image
 
 ![Guess Image](https://user-images.githubusercontent.com/74393555/101244385-0f4f3200-3728-11eb-8763-26b518ab92e3.png)
+
+# Guess Image Result
+
+![GuessImage Result](https://user-images.githubusercontent.com/74393555/101244382-0a8a7e00-3728-11eb-98ec-7f0108bd583e.png)
