@@ -59,6 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text('Exit Game'),
                 ),
               ),
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: RaisedButton(onPressed: HomeScreen,
+              child: Text('Go Home'),
+            ),
+          ),
             ],
           ),
         )
@@ -74,6 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
   void MainMenu() {
     setState(() {
       Navigator.push(context, MaterialPageRoute(builder: (context) => MyLevel()));
+    });
+  }
+
+  void HomeScreen() {
+    setState(() {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => SplashScreen()));
     });
   }
 }

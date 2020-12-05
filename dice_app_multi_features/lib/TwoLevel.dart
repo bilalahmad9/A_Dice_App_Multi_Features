@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:diceeapp/FirstPage.dart';
 import 'package:diceeapp/HardLevel.dart';
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 void main() => runApp(MyLevel());
 
@@ -48,6 +49,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text('Hard Level'),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: RaisedButton(onPressed: HomeScreen,
+                  child: Text('Go Home'),
+                ),
+              ),
 
             ],
           ),
@@ -64,6 +71,12 @@ void changeLevel1() {
   void changeLevel2() {
     setState(() {
       Navigator.push(context, MaterialPageRoute(builder: (context) => HardLevel()));
+    });
+  }
+
+  void HomeScreen() {
+    setState(() {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => SplashScreen()));
     });
   }
 }
