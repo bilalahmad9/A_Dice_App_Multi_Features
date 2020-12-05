@@ -44,19 +44,19 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 60),
+                padding: const EdgeInsets.only(left: 100),
                 child: RaisedButton(onPressed: changeLevel1,
                 child: Text('Simple Level'),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(left: 100),
                 child: RaisedButton(onPressed: changeLevel2,
                   child: Text('Hard Level'),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(left: 100),
                 child: RaisedButton(onPressed: HomeScreen,
                   child: Text('Go Home'),
                 ),
