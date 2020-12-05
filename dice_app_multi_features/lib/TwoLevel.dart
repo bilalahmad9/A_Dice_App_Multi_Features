@@ -45,13 +45,13 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(left: 100),
-                child: RaisedButton(onPressed: changeLevel1,
+                child: RaisedButton(onPressed: changeLevel1, color: Colors.green,
                 child: Text('Simple Level'),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 100),
-                child: RaisedButton(onPressed: changeLevel2,
+                child: RaisedButton(onPressed: changeLevel2, color: Colors.red,
                   child: Text('Hard Level'),
                 ),
               ),

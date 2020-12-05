@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           Padding(
             padding: const EdgeInsets.only(top: 10),
-            child: RaisedButton(onPressed: HomeScreen,
+            child: RaisedButton(onPressed: HomeScreen, color: Colors.green,
               child: Text('Go Home'),
             ),
           ),

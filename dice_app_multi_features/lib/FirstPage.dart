@@ -85,14 +85,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
-                child: RaisedButton(onPressed: MainMenu,
+                child: RaisedButton(onPressed: MainMenu, color: Colors.red,
                   child: Text('Exit Game'),
                 ),
               ),
 
               Padding(
                 padding: const EdgeInsets.only(top: 10),
-                child: RaisedButton(onPressed: HomeScreen,
+                child: RaisedButton(onPressed: HomeScreen, color: Colors.green,
                   child: Text('Go Home'),
                 ),
               ),
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if(randomIntForDiceOne >= randomIntForDiceTwo) {
       AlertDialog alert = AlertDialog(
         title: Text("Winner Dice :", style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold, color: Colors.green),),
-        content: Text("Dice One is Greater ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.red),),
+        content: Text("Dice One is Winner ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.red),),
       );
 
       showDialog(
@@ -128,7 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if(randomIntForDiceOne < randomIntForDiceTwo) {
       AlertDialog alert = AlertDialog(
         title: Text("Winner Dice :", style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold, color: Colors.green),),
-        content: Text("Dice Two is Greater ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.red),),
+        content: Text("Dice Two is Winner ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.red),),
       );
 
       showDialog(
