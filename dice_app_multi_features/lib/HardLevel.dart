@@ -67,9 +67,9 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 60),
-                child: RaisedButton( onPressed: changeImage,
+                child: RaisedButton(
                   child: Text('Roll Dice'),
-
+                  onPressed: changeImage,
                 ),
               ),
               Padding(
@@ -95,7 +95,6 @@ class _MyHomePageState extends State<MyHomePage> {
       randomIntForDiceOne = Random().nextInt(6);
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => GuessScreen()));
-
     });
   }
 

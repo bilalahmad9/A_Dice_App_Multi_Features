@@ -1,9 +1,11 @@
 import 'dart:math';
+import 'package:diceeapp/HardLevel.dart';
 import 'mainDrawer.dart';
 import 'main.dart';
 import 'package:flutter/material.dart';
 import 'FirstPage.dart';
 import 'TwoLevel.dart';
+import 'HardLevel.dart';
 
 void main() => runApp(GuessScreen());
 
@@ -26,6 +28,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  var imageArray = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
+
+  int correctImage1 = 0;
+  int correctImage2 = 1;
+  int correctImage3 = 2;
+  int correctImage4 = 3;
+  int correctImage5= 4;
+  int correctImage6 = 5;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,24 +76,34 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 FlatButton(
                   child: Image.asset(
-                    'images/dice1.png',
+                    'images/'+imageArray[correctImage1],
                     height: 50,
                     width: 50,
                   ),
+                  onPressed:() {
+                    showAlertDialog(context);
+                  },
                 ),
                 FlatButton(
                   child: Image.asset(
-                    'images/dice2.png',
+                    'images/'+imageArray[correctImage2],
                     height: 50,
                     width: 50,
+
                   ),
+                  onPressed:() {
+                    showAlertDialog(context);
+                  },
                 ),
                 FlatButton(
                   child: Image.asset(
-                    'images/dice3.png',
+                    'images/'+imageArray[correctImage3],
                     height: 50,
                     width: 50,
                   ),
+                  onPressed:() {
+                    showAlertDialog(context);
+                  },
                 ),
               ],
             ),
@@ -91,24 +113,33 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 FlatButton(
                   child: Image.asset(
-                    'images/dice4.png',
+                    'images/'+imageArray[correctImage4],
                     height: 50,
                     width: 50,
                   ),
+                  onPressed:() {
+                    showAlertDialog(context);
+                  },
                 ),
                 FlatButton(
                   child: Image.asset(
-                    'images/dice5.png',
+                    'images/'+imageArray[correctImage5],
                     height: 50,
                     width: 50,
                   ),
+                  onPressed:() {
+                    showAlertDialog(context);
+                  },
                 ),
                 FlatButton(
                   child: Image.asset(
-                    'images/dice6.png',
+                    'images/'+imageArray[correctImage6],
                     height: 50,
                     width: 50,
                   ),
+                  onPressed:() {
+                    showAlertDialog(context);
+                  },
                 ),
               ],
             ),
@@ -146,5 +177,28 @@ class _MyHomePageState extends State<MyHomePage> {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => SplashScreen()));
     });
+  }
+
+  showAlertDialog(BuildContext context) {
+    if (correctImage2 == correctImage2) {
+      AlertDialog alert = AlertDialog(
+        title: Text("Congratulation you pickup the right Dice", style: TextStyle(
+            fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.green),),
+
+      );
+
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return alert;
+        },
+      );
+    }
+    else
+      {
+        setState(() {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => HardLevel()));
+        });
+      }
   }
 }
