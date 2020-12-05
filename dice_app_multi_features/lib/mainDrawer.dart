@@ -1,5 +1,6 @@
 import 'TwoLevel.dart';
 import 'package:flutter/material.dart';
+import 'ContactUs.dart';
 
 
 class MainDrawer extends StatelessWidget {
@@ -60,12 +61,17 @@ class MainDrawer extends StatelessWidget {
       ),
 
       ListTile(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => MyContact()),
+          );
+        },
         leading: Icon(
           Icons.inbox,
           color: Colors.black,
         ),
-        title: Text("Your Inbox"),
+        title: Text("Contact Us"),
       ),
 
       ListTile(
