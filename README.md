@@ -24,3 +24,7 @@
 # Level one Winner
 
 ![Level 1 Winner](https://user-images.githubusercontent.com/74393555/101244325-a071d900-3727-11eb-86fe-f27e1f30dbf5.png)
+
+# HardLevel Screen
+
+![Hard Level](https://user-images.githubusercontent.com/74393555/101244380-06f6f700-3728-11eb-8652-0455bc5aff50.png)
