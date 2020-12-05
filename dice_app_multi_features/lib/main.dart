@@ -1,77 +1,54 @@
-import 'dart:math';
-
+import 'package:diceeapp/FirstPage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'dart:async';
 
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-// This widget is the root of your application.
-@override
-Widget build(BuildContext context) {
-return MaterialApp(
-title: 'Flutter Demo',
-theme: ThemeData(
-primarySwatch: Colors.blue,
-),
-home: MyHomePage(),
-);
-}
-}
+void main() => runApp(SplashScreen());
 
-class MyHomePage extends StatefulWidget {
-MyHomePage();
-
-@override
-_MyHomePageState createState() => _MyHomePageState();
+class SplashScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MySplashScreen(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-
-var imageArray = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
-//var random = new Random();
-int randomIntForDiceOne = Random().nextInt(6);
-int randomIntForDiceTwo = Random().nextInt(6);
-
-@override
-Widget build(BuildContext context) {
-
-return Scaffold(
-backgroundColor: Colors.deepOrangeAccent,
-body: Padding(
-padding: const EdgeInsets.fromLTRB(21, 50, 21, 50),
-child: Column(
-children: <Widget>[
-Padding(
-padding: const EdgeInsets.only(bottom: 60),
-child: Text('The sum is: '+ (randomIntForDiceOne + randomIntForDiceTwo + 2).toString(),
-style: TextStyle(
-fontSize: 20,
-),
-),
-),
-Row(
-mainAxisAlignment: MainAxisAlignment.spaceAround,
-children: <Widget>[
-Image.asset('images/'+imageArray[randomIntForDiceOne], height: 150, width: 150,),
-Image.asset('images/'+imageArray[randomIntForDiceTwo], height: 150, width: 150,),
-],
-),
-Padding(
-padding: const EdgeInsets.only(top: 60),
-child: RaisedButton(onPressed: changeImage,
-child: Text('Roll Dice'),
-),
-)
-],
-),
-)
-);
+class MySplashScreen extends StatefulWidget {
+  @override
+  _MySplashScreenState createState() => _MySplashScreenState();
 }
 
-void changeImage() {
-setState(() {
-randomIntForDiceOne = Random().nextInt(6);
-randomIntForDiceTwo = Random().nextInt(6);
-});
-}
+class _MySplashScreenState extends State<MySplashScreen> {
+
+  @override
+  void initState() {
+    super.initState();
+
+    Timer(Duration(seconds: 5), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp())));
+
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Image.asset('images/mypic.jpg', height: 150.0, width: 150,),
+          SizedBox(height: 20,),
+          Text('My Name is Bilal Ahmad',),
+          SizedBox(height: 30,),
+          Text("Registration No : SP17-BCS-009"),
+
+          SizedBox( height: 30.0),
+
+          SpinKitRipple(color: Colors.blue),
+        ],
+      ),
+    );
+  }
 }
