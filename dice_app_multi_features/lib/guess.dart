@@ -31,6 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   var imageArray = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
 
+  HardLevel  Image1;
+
   int correctImage1 = 0;
   int correctImage2 = 1;
   int correctImage3 = 2;
