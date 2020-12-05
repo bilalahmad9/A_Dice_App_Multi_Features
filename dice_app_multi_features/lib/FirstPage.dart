@@ -57,6 +57,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   Image.asset('images/'+imageArray[randomIntForDiceTwo], height: 150, width: 150,),
                 ],
               ),
+
+              Padding(
+                padding: const EdgeInsets.only(top: 60),
+                child: RaisedButton(
+                  child: Text('Check Winner Dice'),
+                  onPressed:() {
+                  showAlertDialog(context);
+                  },
+                ),
+              ),
+
               Padding(
                 padding: const EdgeInsets.only(top: 60),
                 child: RaisedButton(onPressed: changeImage,
@@ -83,10 +94,41 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void changeImage() {
+
     setState(() {
       randomIntForDiceOne = Random().nextInt(6);
       randomIntForDiceTwo = Random().nextInt(6);
     });
+  }
+
+  showAlertDialog(BuildContext context)
+  {
+    if(randomIntForDiceOne >= randomIntForDiceTwo) {
+      AlertDialog alert = AlertDialog(
+        title: Text("Winner Dice :", style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold, color: Colors.green),),
+        content: Text("Dice One is Greater ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.red),),
+      );
+
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return alert;
+        },
+      );
+    }
+    if(randomIntForDiceOne < randomIntForDiceTwo) {
+      AlertDialog alert = AlertDialog(
+        title: Text("Winner Dice :", style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold, color: Colors.green),),
+        content: Text("Dice Two is Greater ", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.red),),
+      );
+
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return alert;
+        },
+      );
+    }
   }
 
   void MainMenu() {
