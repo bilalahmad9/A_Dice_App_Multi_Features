@@ -20,3 +20,7 @@
 # Simple Level
 
 ![Simple level](https://user-images.githubusercontent.com/74393555/101244321-9a7bf800-3727-11eb-9c13-8a6168b71e22.png)
+
+# Level one Winner
+
+![Level 1 Winner](https://user-images.githubusercontent.com/74393555/101244325-a071d900-3727-11eb-86fe-f27e1f30dbf5.png)
