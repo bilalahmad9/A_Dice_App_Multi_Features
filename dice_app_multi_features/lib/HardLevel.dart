@@ -1,12 +1,12 @@
 import 'dart:math';
-import 'package:diceeapp/FirstPage.dart';
-import 'package:diceeapp/HardLevel.dart';
 import 'package:flutter/material.dart';
+import 'main.dart';
+import 'TwoLevel.dart';
 
-void main() => runApp(MyLevel());
+void main() => runApp(HardLevel());
 
-class MyLevel extends StatelessWidget {
-  // This widget is the root of your application.
+class HardLevel extends StatelessWidget {
+// This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,42 +28,40 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  var imageArray = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
+//var random = new Random();
+  int randomIntForDiceOne = Random().nextInt(6);
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         backgroundColor: Colors.deepOrangeAccent,
         body: Padding(
           padding: const EdgeInsets.fromLTRB(21, 50, 21, 50),
           child: Column(
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(top: 60),
-                child: RaisedButton(onPressed: changeLevel1,
-                child: Text('Simple Level'),
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Image.asset('images/'+imageArray[randomIntForDiceOne], height: 150, width: 150,),
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 60),
-                child: RaisedButton(onPressed: changeLevel2,
-                  child: Text('Hard Level'),
+                child: RaisedButton(onPressed: changeImage,
+                  child: Text('Roll Dice'),
                 ),
-              ),
-
+              )
             ],
           ),
         )
     );
   }
 
-void changeLevel1() {
-  setState(() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => MyApp()));
-  });
-}
-
-  void changeLevel2() {
+  void changeImage() {
     setState(() {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HardLevel()));
+      randomIntForDiceOne = Random().nextInt(6);
     });
   }
 }
