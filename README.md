@@ -28,3 +28,7 @@
 # HardLevel Screen
 
 ![Hard Level](https://user-images.githubusercontent.com/74393555/101244380-06f6f700-3728-11eb-8652-0455bc5aff50.png)
+
+# Guess Image
+
+![Guess Image](https://user-images.githubusercontent.com/74393555/101244385-0f4f3200-3728-11eb-8763-26b518ab92e3.png)
