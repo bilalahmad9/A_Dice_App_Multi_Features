@@ -37,19 +37,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-        backgroundColor: Colors.deepOrangeAccent,
+        backgroundColor: Colors.black,
         body: Padding(
           padding: const EdgeInsets.fromLTRB(21, 50, 21, 50),
           child: Column(
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(bottom: 60),
-                child: Text('The sum is: '+ (randomIntForDiceOne + randomIntForDiceTwo + 2).toString(),
+                child: Text('Sum of Dice = '+ (randomIntForDiceOne + randomIntForDiceTwo + 2).toString(),
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.yellowAccent,
                   ),
                 ),
               ),
+
+              SizedBox(height: 30.0,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[

@@ -35,15 +35,16 @@ class _MySplashScreenState extends State<MySplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Image.asset('images/mypic.jpg', height: 150.0, width: 150,),
           SizedBox(height: 20,),
-          Text('My Name is Bilal Ahmad',),
+          Text('My Name is Bilal Ahmad', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.white),),
           SizedBox(height: 30,),
-          Text("Registration No : SP17-BCS-009"),
+          Text("Registration No : SP17-BCS-009",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0, color: Colors.white),),
 
           SizedBox( height: 30.0),
 
