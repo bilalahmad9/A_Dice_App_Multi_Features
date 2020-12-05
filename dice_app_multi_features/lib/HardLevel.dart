@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 import 'TwoLevel.dart';
 import 'mainDrawer.dart';
+import 'guess.dart';
 
 void main() => runApp(HardLevel());
 
@@ -92,6 +93,9 @@ class _MyHomePageState extends State<MyHomePage> {
   void changeImage() {
     setState(() {
       randomIntForDiceOne = Random().nextInt(6);
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => GuessScreen()));
+
     });
   }
 
@@ -107,20 +111,5 @@ class _MyHomePageState extends State<MyHomePage> {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => SplashScreen()));
     });
-  }
-
-  showAlertDialog(BuildContext context) {
-    AlertDialog alert = AlertDialog(
-      title: Text("Guess Number :", style: TextStyle(
-          fontSize: 40.0, fontWeight: FontWeight.bold, color: Colors.green),),
-      content: Text("Dice One is Greater ", style: TextStyle(
-          fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.red),),
-    );
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return alert;
-      },
-    );
   }
 }

@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.fromLTRB(21, 50, 21, 50),
           child: Column(
             children: <Widget>[
-              Padding(
+               Padding(
                 padding: const EdgeInsets.only(left: 100),
                 child: RaisedButton(onPressed: changeLevel1, color: Colors.green,
                 child: Text('Simple Level'),
