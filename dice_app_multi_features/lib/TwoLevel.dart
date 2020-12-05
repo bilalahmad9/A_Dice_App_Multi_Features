@@ -1,8 +1,10 @@
 import 'dart:math';
 import 'package:diceeapp/FirstPage.dart';
 import 'package:diceeapp/HardLevel.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'main.dart';
+import 'mainDrawer.dart';
 
 void main() => runApp(MyLevel());
 
@@ -33,6 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
+        appBar: AppBar(backgroundColor: Colors.blue, title: Text('Navigation Bar', style: TextStyle(color: Colors.black),),),
+        drawer: Drawer(
+          child: MainDrawer(),
+        ),
         body: Padding(
           padding: const EdgeInsets.fromLTRB(21, 50, 21, 50),
           child: Column(

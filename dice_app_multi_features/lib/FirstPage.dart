@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'TwoLevel.dart';
+import 'mainDrawer.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,6 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
         backgroundColor: Colors.black,
+        appBar: AppBar(backgroundColor: Colors.blue, title: Text('Simple Level', style: TextStyle(color: Colors.white,  fontWeight: FontWeight.bold,fontSize: 30.0),),),
+        drawer: Drawer(
+          child: MainDrawer(),
+        ),
         body: Padding(
           padding: const EdgeInsets.fromLTRB(21, 50, 21, 50),
           child: Column(
@@ -46,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.only(bottom: 60),
                 child: Text('Sum of Dice = '+ (randomIntForDiceOne + randomIntForDiceTwo + 2).toString(),
                   style: TextStyle(
-                    fontSize: 50,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.yellowAccent,
                   ),
@@ -63,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               Padding(
-                padding: const EdgeInsets.only(top: 60),
+                padding: const EdgeInsets.only(top: 30),
                 child: RaisedButton(
                   child: Text('Check Winner Dice'),
                   onPressed:() {
@@ -73,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               Padding(
-                padding: const EdgeInsets.only(top: 60),
+                padding: const EdgeInsets.only(top: 30),
                 child: RaisedButton(onPressed: changeImage,
                   child: Text('Roll Dice'),
                 ),

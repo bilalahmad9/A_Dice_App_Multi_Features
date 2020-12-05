@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'TwoLevel.dart';
+import 'mainDrawer.dart';
 
 void main() => runApp(HardLevel());
 
@@ -37,6 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
         backgroundColor: Colors.black,
+        appBar: AppBar(backgroundColor: Colors.blue, title: Text('Hard Level', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold,fontSize: 30.0),),),
+        drawer: Drawer(
+          child: MainDrawer(),
+        ),
         body: Padding(
           padding: const EdgeInsets.fromLTRB(21, 50, 21, 50),
           child: Column(
